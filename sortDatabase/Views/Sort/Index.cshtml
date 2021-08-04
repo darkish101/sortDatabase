@@ -1,0 +1,30 @@
+﻿@model List<Models.OldData>
+@{
+    ViewData["Title"] = "Sort";
+}
+
+<table id="customers" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>National Number</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Manger</th>
+            <th>Manger Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var employee in Model)
+            {
+        <tr>
+            <th>@employee.Name</th>
+            <th>@employee.NationalNumer</th>
+            <th>@employee.PhoneNumber</th>
+            <th>@employee.Email</th>
+            <th>@employee.Manger.Name</th>
+            <th>@employee.Manger.PhoneNumber</th>
+        </tr>
+            }
+            </tbody>
+</table>
